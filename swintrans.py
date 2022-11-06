@@ -435,7 +435,7 @@ def SwinTransformer(model_name='swin_tiny_224', num_classes=1000, include_top=Tr
     if pretrained is True:
         url = f'/content/drive/MyDrive/swin_base_patch4_window7_224_in22k/{model_name}.tgz'
         pretrained_ckpt = tf.keras.utils.get_file(
-            model_name, 'file://'+fullPath, untar=True)
+            model_name, 'file://'+url, untar=True)
     else:
         pretrained_ckpt = pretrained
 
