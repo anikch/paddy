@@ -433,9 +433,9 @@ def SwinTransformer(model_name='swin_tiny_224', num_classes=1000, include_top=Tr
     )
     net(tf.keras.Input(shape=(cfg['input_size'][0], cfg['input_size'][1], 3)))
     if pretrained is True:
-        url = f'https://github.com/rishigami/Swin-Transformer-TF/releases/download/v0.1-tf-swin-weights/{model_name}.tgz'
+        url = f'/content/drive/MyDrive/swin_base_patch4_window7_224_in22k/{model_name}.tgz'
         pretrained_ckpt = tf.keras.utils.get_file(
-            model_name, url, untar=True)
+            model_name, 'file://'+fullPath, untar=True)
     else:
         pretrained_ckpt = pretrained
 
@@ -451,9 +451,3 @@ def SwinTransformer(model_name='swin_tiny_224', num_classes=1000, include_top=Tr
             net.load_weights(pretrained_ckpt)
 
     return net
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
