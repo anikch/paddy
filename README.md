@@ -1,4 +1,5 @@
-# paddy
+# Classification of nine types of paddy leaf diseases using deep learning approaches
+
 
 Experiment 1: Code2_Paddy_VGG16_exp1.ipynb
 
